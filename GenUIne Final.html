@@ -531,7 +531,6 @@
 </head>
 <body>
 
-<!-- NAV DOTS -->
 <nav class="nav-dots" id="navDots">
   <a href="#s1" class="active"></a>
   <a href="#s2"></a>
@@ -544,7 +543,6 @@
   <a href="#s9"></a>
 </nav>
 
-<!-- ── SLIDE 1: HERO ── -->
 <section class="slide" id="s1">
   <div class="bg-grid"></div>
   <div class="orb"></div>
@@ -557,6 +555,7 @@
     </h1>
     <p class="hero-sub fade-up">Where campus skills meet. An AI-powered peer exchange platform that turns hidden student expertise into structured, rewarding learning.</p>
     <div class="hero-pills fade-up">
+      <span class="pill" style="border-color: var(--accent2); color: #b8a9ff; background: rgba(123,97,255,0.1);">📍 Peer-to-Peer Skill Exchange Platform for College Communities</span>
       <span class="pill">🤖 AI Matchmaking</span>
       <span class="pill">🔄 Skill Barter</span>
       <span class="pill">💎 Credit System</span>
@@ -565,7 +564,6 @@
   </div>
 </section>
 
-<!-- ── SLIDE 2: PROBLEM ── -->
 <section class="slide" id="s2">
   <div class="slide-inner">
     <div class="slide-num fade-up">02 · The Problem</div>
@@ -603,20 +601,17 @@
   </div>
 </section>
 
-<!-- ── SLIDE 3: LIVE DEMO ── -->
 <section class="slide" id="s3" style="background:linear-gradient(135deg,#0d0d14 0%,#0f0f1f 100%);">
   <div class="slide-inner">
     <div class="slide-num fade-up">03 · Live Demo — Try It Now</div>
     <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:center;">
 
-      <!-- LEFT: input panel -->
       <div class="fade-up">
         <h2 style="font-family:'Syne',sans-serif;font-size:clamp(30px,3.5vw,46px);font-weight:800;letter-spacing:-2px;line-height:1.1;margin-bottom:16px;">
           See <em style="font-style:normal;color:#c8f135;">GenUIne</em><br/>in action
         </h2>
         <p style="font-size:15px;color:rgba(245,243,238,0.5);line-height:1.8;margin-bottom:32px;">Type any skill you want to learn and watch the full platform flow — match, schedule, credits — live.</p>
 
-        <!-- Skill input -->
         <div style="margin-bottom:16px;">
           <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5a5a6e;margin-bottom:8px;">What do you want to learn?</div>
           <div style="display:flex;gap:10px;">
@@ -634,7 +629,6 @@
           </div>
         </div>
 
-        <!-- Quick skill chips -->
         <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5a5a6e;margin-bottom:10px;">Try these:</div>
         <div style="display:flex;flex-wrap:wrap;gap:8px;">
           <button class="chip-btn" onclick="quickSelect('Machine Learning')">🤖 Machine Learning</button>
@@ -645,7 +639,6 @@
           <button class="chip-btn" onclick="quickSelect('Data Science')">📊 Data Science</button>
         </div>
 
-        <!-- Credits wallet -->
         <div id="walletBar" style="margin-top:28px;padding:16px 20px;background:#13131a;border:1px solid rgba(255,255,255,0.07);border-radius:14px;display:flex;align-items:center;justify-content:space-between;">
           <div style="font-size:13px;color:#5a5a6e;">Your credit balance</div>
           <div style="display:flex;align-items:center;gap:8px;">
@@ -655,10 +648,8 @@
         </div>
       </div>
 
-      <!-- RIGHT: result panel -->
       <div id="resultPanel" style="opacity:0;transition:opacity 0.5s ease,transform 0.5s ease;transform:translateY(20px);">
 
-        <!-- Step 1: Searching -->
         <div id="stepSearch" style="display:none;">
           <div style="background:#13131a;border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:28px;text-align:center;">
             <div style="font-size:32px;margin-bottom:12px;" id="searchEmoji">🔍</div>
@@ -670,7 +661,6 @@
           </div>
         </div>
 
-        <!-- Step 2: Match result -->
         <div id="stepMatch" style="display:none;">
           <div style="background:#13131a;border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:28px;">
 
@@ -679,7 +669,6 @@
               <div style="background:rgba(200,241,53,0.12);border:1px solid rgba(200,241,53,0.3);color:#c8f135;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;padding:5px 14px;border-radius:100px;" id="matchScore">96% match</div>
             </div>
 
-            <!-- Matched student -->
             <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;padding:16px;background:rgba(255,255,255,0.02);border-radius:14px;border:1px solid rgba(255,255,255,0.05);">
               <div id="matchAvatar" style="width:52px;height:52px;border-radius:50%;background:rgba(123,97,255,0.2);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">👩‍💻</div>
               <div style="flex:1;">
@@ -692,7 +681,6 @@
               </div>
             </div>
 
-            <!-- Session details -->
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px;">
               <div style="padding:12px 14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.05);border-radius:12px;">
                 <div style="font-size:11px;color:#5a5a6e;margin-bottom:4px;">📅 Scheduled</div>
@@ -704,13 +692,11 @@
               </div>
             </div>
 
-            <!-- Credit deduction -->
             <div id="creditDeductBox" style="padding:14px 18px;background:rgba(200,241,53,0.06);border:1px solid rgba(200,241,53,0.2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
               <div style="font-size:13px;color:rgba(245,243,238,0.7);">💎 Session cost</div>
               <div style="font-family:'Syne',sans-serif;font-size:15px;font-weight:700;color:#c8f135;" id="creditCost">− 15 credits</div>
             </div>
 
-            <!-- Confirm button -->
             <button id="confirmBtn" onclick="confirmSession()"
               style="width:100%;background:#c8f135;color:#0a0a0f;border:none;border-radius:12px;padding:14px;font-family:'Syne',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:all 0.2s;"
               onMouseOver="this.style.opacity='0.9'"
@@ -720,7 +706,6 @@
           </div>
         </div>
 
-        <!-- Step 3: Confirmed -->
         <div id="stepConfirmed" style="display:none;">
           <div style="background:#13131a;border:1px solid rgba(200,241,53,0.25);border-radius:20px;padding:36px;text-align:center;">
             <div style="font-size:48px;margin-bottom:16px;">🎉</div>
@@ -746,7 +731,6 @@
           </div>
         </div>
 
-        <!-- Idle state -->
         <div id="stepIdle">
           <div style="background:#13131a;border:1px solid rgba(255,255,255,0.05);border-radius:20px;padding:40px;text-align:center;">
             <div style="font-size:40px;margin-bottom:16px;">🎯</div>
@@ -889,7 +873,6 @@ document.getElementById('skillInput').addEventListener('keydown', function(e) {
 });
 </script>
 
-<!-- ── SLIDE 4: FEATURES ── -->
 <section class="slide" id="s4">
   <div class="slide-inner">
     <div class="features-header fade-up">
@@ -942,7 +925,6 @@ document.getElementById('skillInput').addEventListener('keydown', function(e) {
   </div>
 </section>
 
-<!-- ── SLIDE 5: CREDIT LOOP ── -->
 <section class="slide" id="s5">
   <div class="slide-inner">
     <div class="slide-num fade-up">05 · Credit & Incentive Loop</div>
@@ -968,7 +950,6 @@ document.getElementById('skillInput').addEventListener('keydown', function(e) {
           <div class="icon">📚</div>
           <div class="text">Spend to Learn</div>
         </div>
-        <!-- circle connectors -->
         <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none" viewBox="0 0 340 340">
           <circle cx="170" cy="170" r="100" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="6 4"/>
         </svg>
@@ -987,7 +968,6 @@ document.getElementById('skillInput').addEventListener('keydown', function(e) {
   </div>
 </section>
 
-<!-- ── SLIDE 6: AI MATCHING ── -->
 <section class="slide" id="s6">
   <div class="slide-inner">
     <div class="slide-num fade-up">06 · AI Matchmaking & Scheduling</div>
@@ -1027,7 +1007,6 @@ document.getElementById('skillInput').addEventListener('keydown', function(e) {
   </div>
 </section>
 
-<!-- ── SLIDE 7: LEADERBOARD ── -->
 <section class="slide" id="s7">
   <div class="slide-inner">
     <div class="slide-num fade-up">07 · Leaderboard, Badges & Community</div>
@@ -1080,7 +1059,6 @@ document.getElementById('skillInput').addEventListener('keydown', function(e) {
   </div>
 </section>
 
-<!-- ── SLIDE 8: RADAR ── -->
 <section class="slide" id="s8">
   <div class="slide-inner">
     <div class="slide-num fade-up">08 · Trending Skills Radar</div>
@@ -1140,7 +1118,6 @@ document.getElementById('skillInput').addEventListener('keydown', function(e) {
   </div>
 </section>
 
-<!-- ── SLIDE 9: WHY WE WIN ── -->
 <section class="slide" id="s9">
   <div class="bg-accent"></div>
   <div class="slide-inner">
